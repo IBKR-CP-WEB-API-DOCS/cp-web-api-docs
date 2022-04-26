@@ -39,3 +39,27 @@ nav img {
     padding-inline: 16px;
     margin-bottom: 11px;
 }
+
+nav .icon {
+    display: none;
+  }
+
+@media screen and (max-width: 900px) {
+    nav a:not(:nth-child(2), :nth-last-child(1)) {
+        display: none;
+    }
+    nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+@media screen and (max-width: 675px) {
+    nav a {
+        display: none;
+    }
+    nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
