@@ -5,24 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./static/styles/site.css">
   <link rel="stylesheet" href="./static/styles/navbar.css">
+  <link rel="stylesheet" href="./static/styles/drawer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
   <title>Interactive Brokers Client Portal Web API documentation</title>
 </head>
 
 <body>
-  <nav>
+  <div id="navbar-drawer" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="active" href="#explore_endpoints">Explore Endpoints</a>
+    <a href="#websockets">Websocket</a>
+    <a href="#common-issues">Common Issues</a>
+    <a href="#docs">Documentation</a>
+    <a href="#support">Support</a>
+  </div>
+
+  <nav id="navbar-top">
     <div class="nav-left">
       <img src="./static/assets/ibkr-logo.svg"/>
       <a class="active" href="#explore_endpoints">Explore Endpoints</a>
       <a href="#websockets">Websocket</a>
     </div>
     <div class="nav-right">
-      <a href="#docs">Documentation</a>
       <a href="#common-issues">Common Issues</a>
+      <a href="#docs">Documentation</a>
       <a href="#support">Support</a>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
   </nav>
 
+  
+
 </body>
 
+<script src="./static/scripts/navbar.js"></script>
 </html>
