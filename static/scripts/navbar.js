@@ -9,8 +9,11 @@ function closeNav() {
 }
 
 $(function () {
-  let currentPage = window.location.pathname;
-  $('#navbar-top').find('a').each(function () {
-    $(this).toggleClass('active', "/" + $(this).attr('href') == currentPage);
+  let currentPage = window.location.pathname.split("/").slice(-1)[0];
+  $('#navbar-top')
+    .find('a')
+    .each(function () {
+      console.log("/"+$(this).attr('href'))
+      $(this).toggleClass('active', $(this).attr('href') == currentPage);
   });
 });
