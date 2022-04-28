@@ -3,63 +3,73 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000;
-}
-
-.nav-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    font-size: small;
+    padding: 0.5rem 1rem;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    margin-bottom: 1rem;
 }
 
 .nav-right {
     display: flex;
     flex-direction: row;
+    gap: 0.5rem;
 }
 
 nav a {
-    color: white;
+    font-weight: 400;
+    color: black;
     display: block;
-    padding: 14px 16px;
+    padding: 7px 8px;
     text-decoration: none;
 }
 
 nav a:hover:not(.active) {
-    background-color: #3B3B3B;
+    color: #d81222;
 }
 
 .active {
     text-decoration: underline;
     text-decoration-color: #d81222;
     text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 nav img {
-    height: 25px;
-    padding-inline: 16px;
-    margin-bottom: 11px;
+    height: 20px;
+    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
 nav .icon {
     display: none;
-  }
+}
 
-@media screen and (max-width: 900px) {
-    nav a:not(:nth-child(2), :nth-last-child(1)) {
+nav a#getting-started {
+    background-color: #d81222;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    nav a:not(.icon, #index, #getting-started) {
         display: none;
     }
-    nav a.icon {
-      float: right;
-      display: block;
-    }
-  }
 
-@media screen and (max-width: 675px) {
-    nav a {
+    nav a.icon {
+        border: 1px solid #d81222;
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    nav a:not(.icon, #index) {
         display: none;
     }
+
     nav a.icon {
-      float: right;
-      display: block;
+        border: 1px solid #d81222;
+        float: right;
+        display: block;
     }
-  }
+}

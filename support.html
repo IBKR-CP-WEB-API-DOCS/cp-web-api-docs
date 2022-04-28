@@ -7,15 +7,40 @@
   <link rel="stylesheet" href="./static/styles/navbar.css">
   <link rel="stylesheet" href="./static/styles/drawer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="./static/scripts/site.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./static/scripts/navbar.js"></script>
   <meta charset="utf-8">
   <title>Interactive Brokers Client Portal Web API documentation</title>
 </head>
 
 <body>
-  <div id="navbar"></div>
-</body>
+  <div id="navbar-drawer" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <i class="fa fa-times"></i>
+    </a>
+    <a href="getting-started.html">Getting Started</a>
+    <a href="endpoints.html">Explore Endpoints</a>
+    <a href="websocket.html">Websocket</a>
+    <a href="workflows.html">Workflows</a>
+    <a href="support.html">Support</a>
+  </div>
 
+  <nav id="navbar-top">
+    <a id="index" href="index.html">
+      <img src="./static/assets/ibkr-logo.svg" />
+    </a>
+    <div class="nav-right">
+      <a id="endpoints" href="endpoints.html">Explore Endpoints</a>
+      <a id="websocket" href="websocket.html">Websocket</a>
+      <a id="workflows" href="workflows.html">Workflows</a>
+      <a id="support" href="support.html">Support</a>
+      <a id="getting-started" href="getting-started.html">Getting Started</a>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+
+</body>
 
 </html>
